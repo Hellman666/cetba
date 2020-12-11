@@ -29,4 +29,5 @@
 			</table> 
 		 </div>
 		</div>
+		<a href="auth" class="btn btn-primary btn-lg" role="button">Admin</a>
 	</body>

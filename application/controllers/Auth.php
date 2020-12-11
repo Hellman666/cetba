@@ -19,7 +19,8 @@ class Auth extends CI_Controller
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
 		$this->lang->load('auth');
-
+		$this->load->view('layout/header_auth');
+		
 	}
 
 	/**
@@ -66,7 +67,6 @@ class Auth extends CI_Controller
 	public function login()
 	{
 		$this->data['title'] = $this->lang->line('login_heading');
-
 		// validate form input
 		$this->form_validation->set_rules('identity', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
 		$this->form_validation->set_rules('password', str_replace(':', '', $this->lang->line('login_password_label')), 'required');
@@ -879,7 +879,6 @@ class Auth extends CI_Controller
 	 */
 	public function _render_page($view, $data = NULL, $returnhtml = FALSE)//I think this makes more sense
 	{
-
 		$viewdata = (empty($data)) ? $this->data : $data;
 
 		$view_html = $this->load->view($view, $viewdata, $returnhtml);
