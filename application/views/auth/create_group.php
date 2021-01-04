@@ -1,8 +1,8 @@
 <h1><?php echo lang('create_group_heading');?></h1>
-<p><?php echo lang('create_group_subheading');?></p>
-
+<p style="text-align: center"><?php echo lang('create_group_subheading');?></p>
+<br>
 <div id="infoMessage"><?php echo $message;?></div>
-
+<div class="container", style="text-align: center">
 <?php echo form_open("auth/create_group");?>
 
       <p>
@@ -18,3 +18,4 @@
       <p><?php echo form_submit('submit', lang('create_group_submit_btn'));?></p>
 
 <?php echo form_close();?>
+</div>

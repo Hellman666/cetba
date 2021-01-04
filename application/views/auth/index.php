@@ -1,9 +1,9 @@
 <h1><?php echo lang('index_heading');?></h1>
-<p><?php echo lang('index_subheading');?></p>
-
+<p style="text-align: center"><?php echo lang('index_subheading');?></p>
+<br>
 <div id="infoMessage"><?php echo $message;?></div>
-
-<table cellpadding=0 cellspacing=10>
+<div class="container">
+<table cellpadding=0 cellspacing=10 class="table table-bordered">
 	<tr>
 		<th><?php echo lang('index_fname_th');?></th>
 		<th><?php echo lang('index_lname_th');?></th>
@@ -28,4 +28,5 @@
 	<?php endforeach;?>
 </table>
 
-<p><?php echo anchor('auth/create_user', lang('index_create_user_link'))?> | <?php echo anchor('auth/create_group', lang('index_create_group_link'))?></p>
+<p style="text-align: center"><?php echo anchor('auth/create_user', lang('index_create_user_link'))?> | <?php echo anchor('auth/create_group', lang('index_create_group_link'))?></p>
+</div>
