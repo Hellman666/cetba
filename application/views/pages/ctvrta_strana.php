@@ -1,10 +1,11 @@
 <div class="container">
 <br>
 <h1>česká literatura 20. a 21. století</h1>
-<img src="assets/pic/book_1.png" alt="book" class="center_1">
+<hr>
+<img src="assets/pic/book_reading.png" alt="book" class="center">
   <table class="table">
   <thead>
-    <tr class="table-warning">
+    <tr class="table-primary">
       <th scope="col">Kniha</th>
       <th scope="col">Autor</th>
     </tr>

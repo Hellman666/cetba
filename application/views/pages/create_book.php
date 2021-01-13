@@ -1,43 +1,45 @@
 <div class="container">
     <div class="testbox">
-        <form action="/">
-        <div class="banner">
-            <h1>Přidání nové knihy</h1>
-        </div>
-        <div class="colums" style='text-align: center'>
-        <br>
-            <div class="item">
-            <label for="autor">Autor<span>*</span></label>
-            <input id="autor" type="text" name="autor" required/>
+        <form>
+            <br>
+            <h1>Přidat knihu</h1>  
+
+            <img src="assets/pic/add_book.png" alt="add_book" class="center">
+
+            <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Jméno</label>
+                <input type="text" class="form-control" placeholder="Jméno autora" id="inputDefault">
             </div>
-            <div class="item">
-            <label for="nazev">Název<span>*</span></label>
-            <input id="nazev" type="text" name="nazev" required/>
+
+            <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Název</label>
+                <input type="text" class="form-control" placeholder="Název knihy" id="inputDefault">
             </div>
-            <div class="item">
-            <label for="pocet_stranek">Počet Stránek<span>*</span></label>
-            <input id="pocet_stranek" type="number" name="pocet_stranek" required/>
+
+            <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Počet stránek</label>
+                <input type="number" class="form-control" placeholder="Počet stránek" id="inputDefault">
             </div>
-            <div class="item">
-            <label for="prebal">Přebal knihy<span>*</span></label>
-            <input id="prebal" type="text" name="prebal" required/>
+
+            <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Přebal knihy</label>
+                <input type="text" class="form-control" placeholder="URL" id="inputDefault">
             </div>
-            <div class="item">
-            <label for="anotace">Anotace<span>*</span></label>
-            <textarea id="anotace" cols="40" rows="5"></textarea>
+
+            <div class="form-group">
+                <label for="exampleTextarea">Anotace</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
             </div>
-            <label for="obdobi">Období:</label>
-            <select name="obdobi" id="odobi">
-                <option value="cs_sv_18">Světová a česká literatura do konce 18. století</option>
-                <option value="cs_sv_19">Světová a česká literatura do konce 19. století</option>
-                <option value="sv_20_21">Světová literatura 20. a 21. století</option>
-                <option value="cs_20_21">Česká literatura 20. a 21. století</option>
-            </select>
-        </div>
-        <br>
-        <div class="btn-block" style="text-align: center">
-            <button type="submit" href="/">Uložit</button>
-        </div>
+
+            <div class="form-group">
+                <label for="exampleSelect1">Název období</label>
+                <select class="form-control" id="exampleSelect1">
+                    <option>Světová a Česká literatura 18. století</option>
+                    <option>Světová a Česká literatura 19. století</option>
+                    <option>Světová literatura 20./21. století</option>
+                    <option>Česká literatura 20./21. století</option>
+                </select>
+            </div>
         </form>
     </div>
 </div>

@@ -15,11 +15,16 @@ class Auth extends CI_Controller
 		$this->load->database();
 		$this->load->library(['ion_auth', 'form_validation']);
 		$this->load->helper(['url', 'language']);
+		$this->load->model('cetba_model');
 
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
+
+		$data['menu'] = $this->cetba_model->get_menu_polozky();
+		$data['knihy'] = $this->cetba_model->index();
 		$this->lang->load('auth');
-		$this->load->view('layout/header_auth');
+		$this->load->view('layout/header');
+		$this->load->view('layout/navbar', $data);
 	}
 
 	/**

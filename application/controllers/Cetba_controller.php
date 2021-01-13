@@ -2,7 +2,7 @@
 class Cetba_controller extends CI_Controller {
 	function  __construct(){
 		parent :: __construct();
-		$this->load->model('cetba_model');            
+		$this->load->model('cetba_model');
 	}
 
 	public function menu()

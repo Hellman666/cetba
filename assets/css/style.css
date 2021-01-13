@@ -1,0 +1,29 @@
+*{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	padding: 20px;
+}
+h1{
+	text-align: center;
+	color: aliceblue;
+}
+
+.table{
+	border: 2px solid aliceblue;
+}
+
+.table-primary{
+	text-align: center;
+	color: aliceblue;
+}
+a{
+	color: aliceblue;
+}
+td{
+	color: aliceblue;
+}

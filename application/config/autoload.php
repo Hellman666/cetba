@@ -58,7 +58,7 @@ $autoload['packages'] = array(APPPATH.'third_party/ion_auth');
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('table', 'database', 'pagination');
+$autoload['libraries'] = array('table', 'database', 'pagination', 'ion_auth',);
 
 /*
 | -------------------------------------------------------------------

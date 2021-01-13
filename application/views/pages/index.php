@@ -1,12 +1,11 @@
 		<br>
 		<h1>SEZNAM LITERÁRNÍCH DĚL K MATURITĚ</h1>
-		<img src="assets/pic/book.png" alt="book" class="center">
+		<hr>
+		<img src="assets/pic/read.png" alt="book_reading" class="center">
 		<div class="container">
-
-		<h2>Ukázka knih</h2>
 			<table class="table">				
 		  		<thead>
-				    <tr  class="table-warning">
+				    <tr class="table-primary">
 				      <th scope="col"></th>
 				      <th scope="col">Název knihy</th>
 				      <th scope="col">Autor</th>

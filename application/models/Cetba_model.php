@@ -5,13 +5,31 @@ class cetba_model extends CI_Model{
 
 	public function get_menu_polozky()
 	{
+
+        function  __construct(){
+            parent :: __construct();
+            $this->load->library('controllers/Auth.php');   
+        }
+
+        if ($this->ion_auth->logged_in())
+        {
+            $this->db->select('categorie, id_categorie');
+            $this->db->from('menu_logged');
+            $this->db->order_by('idmenu');
+    
+            $query = $this->db->get();
+            return $query->result();
+        }
+        else
+        {
 		$this->db->select('categorie, id_categorie');
 		$this->db->from('menu');
 		$this->db->order_by('idmenu');
 
 		$query = $this->db->get();
-		return $query->result();
-	}
+        return $query->result();
+        }
+    }
 
 	public function index()
 	{

@@ -13,4 +13,4 @@ Jedná se repositář projekt do předmětu WEB na OAUH
 </p>
 
 ### Dokumentace:
-- [Uživatelská dokumentace](https://github.com/Hellman666/cetba/blob/master/%C4%8Detba_dokumentace.pdf)
+- [Uživatelská dokumentace](https://github.com/Hellman666/cetba/blob/master/Cetba_dokumentace.pdf)

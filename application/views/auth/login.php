@@ -2,7 +2,7 @@
 <p style="text-align: center"><?php echo lang('login_subheading');?></p>
 
 <br>
-<div id="infoMessage"><?php echo $message;?></div>
+<div style="text-align: center" id="infoMessage"><?php echo $message;?></div>
 <div class="container", style="text-align: center">
 <?php echo form_open("auth/login");?>
 
