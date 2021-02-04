@@ -7,7 +7,6 @@ class cetba_model extends CI_Model{
 	{
 
         function  __construct(){
-            parent :: __construct();
             $this->load->library('controllers/Auth.php');   
         }
 
@@ -94,5 +93,10 @@ class cetba_model extends CI_Model{
       $kniha = $this->db->get();
       $result = $kniha->result();
       return $result;
+    }
+
+    function insert_data($data)
+    {
+        $this->db->insert('knihy', $data);
     }
 }

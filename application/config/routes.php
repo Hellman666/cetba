@@ -58,6 +58,7 @@ $route['kniha/(:num)'] = 'Cetba_controller/kniha/$1';
 $route['login'] = 'Cetba_controller/auth/login';
 $route['create_user'] = 'Cetba_controller/auth/create_user';
 $route['create_book'] = 'Cetba_controller/create_book';
+$route['uzivatel'] = 'Uzivatl_controller';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

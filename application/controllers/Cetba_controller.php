@@ -3,6 +3,8 @@ class Cetba_controller extends CI_Controller {
 	function  __construct(){
 		parent :: __construct();
 		$this->load->model('cetba_model');
+		//$this->load->database();
+		//$this->load->helper('url');
 	}
 
 	public function menu()
@@ -71,5 +73,32 @@ class Cetba_controller extends CI_Controller {
 		$this->load->view('layout/navbar', $data);
 		$this->load->view('pages/create_book');
 		$this->load->view('layout/footer');
+	}
+
+	public function form_validation(){
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('nazev_knihy', 'Nazev_knihy', 'required');
+		$this->form_validation->set_rules('autor', 'Autor', 'required');
+		$this->form_validation->set_rules('prebal', 'Prebal', 'required');
+	
+		if($this->form_validation->run()){
+			$this->load->model("Cetba_model");
+			$data = array(
+				"nazev_knihy"	=>$this->input->post("nazev_knihy"),
+				"autor"			=>$this->input->post("autor"),
+				"prebal"		=>$this->input->post("prebal"),
+			);
+			$this->Cetba_model->insert_data($data);
+
+			redirect(base_url());
+		}
+		else{
+			$this->create_book();
+		}
+	}
+	
+	public function insered()
+	{
+		$this->menu();
 	}
 }

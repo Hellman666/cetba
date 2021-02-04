@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2021 at 02:07 PM
+-- Generation Time: Jan 14, 2021 at 12:43 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -171,6 +171,32 @@ INSERT INTO `menu` (`idmenu`, `id_categorie`, `categorie`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `menu_logged`
+--
+
+CREATE TABLE `menu_logged` (
+  `idmenu` int(11) NOT NULL,
+  `id_categorie` varchar(45) DEFAULT NULL,
+  `categorie` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `menu_logged`
+--
+
+INSERT INTO `menu_logged` (`idmenu`, `id_categorie`, `categorie`) VALUES
+(1, 'prvni_strana', 'Světová/česká - 18. stol.'),
+(2, 'druha_strana', 'Světová/česká - 19. stol.'),
+(3, 'treti_strana', 'Světová - 20./21. stol.'),
+(4, 'ctvrta_strana', 'Česká - 20./21. stol.'),
+(5, 'create_book', 'Přidat knihu'),
+(6, 'auth/index', 'Správa uživatelů'),
+(7, 'auth/create_group', 'Vytvořit skupinu'),
+(8, 'auth/logout', 'Odhlásit se');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `obdobi`
 --
 
@@ -222,7 +248,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$Aqv3N52B.V.Hx0xjBjb.Xe5i3HuzFOrVh/59x5d1XBpUWlumc.QdS', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1609765115, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2y$12$Aqv3N52B.V.Hx0xjBjb.Xe5i3HuzFOrVh/59x5d1XBpUWlumc.QdS', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610581176, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', NULL, '$2y$12$c0IyC/cfxSgyzjcnhv8HMuUVrIVYmwbKLUpeZJsLBYSXFfmkJKlV6', 'dominikborek@seznam.cz', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1607620359, NULL, 1, 'Dominik', 'Borek', 'Apple', '778261814'),
 (3, '::1', NULL, '$2y$10$6/xrBimIv2pbJI1H53GO8uMhpdARjX6Wdzs6AOfNn2MDNNzWEq2RG', 'vojta@bily.cz', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1607620444, NULL, 1, 'Vojta', 'Bílý', '', '776668442');
 
@@ -275,6 +301,12 @@ ALTER TABLE `login_attempts`
 -- Indexes for table `menu`
 --
 ALTER TABLE `menu`
+  ADD PRIMARY KEY (`idmenu`);
+
+--
+-- Indexes for table `menu_logged`
+--
+ALTER TABLE `menu_logged`
   ADD PRIMARY KEY (`idmenu`);
 
 --
